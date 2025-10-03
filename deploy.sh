@@ -36,6 +36,12 @@ echo -e "${YELLOW}📦 Installing Node.js $NODE_VERSION...${NC}"
 curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash -
 apt-get install -y nodejs
 
+# Install PostgreSQL
+echo -e "${YELLOW}📦 Installing PostgreSQL...${NC}"
+apt install -y postgresql postgresql-contrib
+systemctl start postgresql
+systemctl enable postgresql
+
 # Install PM2 globally
 echo -e "${YELLOW}📦 Installing PM2...${NC}"
 npm install -g pm2
@@ -105,10 +111,11 @@ echo ""
 echo -e "${YELLOW}📝 Next steps:${NC}"
 echo "1. Copy your Next.js project files to $APP_DIR"
 echo "2. Run 'npm install' in the project directory"
-echo "3. Run 'npm run build' to build the project"
-echo "4. Start the application with PM2: 'pm2 start ecosystem.config.js'"
-echo "5. Save PM2 configuration: 'pm2 save'"
-echo "6. Setup PM2 to start on boot: 'pm2 startup'"
+echo "3. Setup database: 'npm run db:setup'"
+echo "4. Run 'npm run build' to build the project"
+echo "5. Start the application with PM2: 'pm2 start ecosystem.config.js'"
+echo "6. Save PM2 configuration: 'pm2 save'"
+echo "7. Setup PM2 to start on boot: 'pm2 startup'"
 echo ""
 echo -e "${YELLOW}🔧 Useful commands:${NC}"
 echo "• View logs: pm2 logs $APP_NAME"

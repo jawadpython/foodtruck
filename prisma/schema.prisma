@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model FoodTruck {
+  id                String   @id @default(cuid())
+  name              String
+  description       String
+  shortDescription  String?
+  category          String
+  featured          Boolean  @default(false)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  // Relations
+  images            Image[]
+  specifications    Specification?
+  equipment         Equipment[]
+  features          Feature[]
+  
+  @@map("food_trucks")
+}
+
+model Image {
+  id          String    @id @default(cuid())
+  fileName    String
+  originalName String
+  filePath    String
+  url         String
+  mimeType    String
+  fileSize    Int
+  uploadedAt  DateTime  @default(now())
+  
+  // Relations
+  foodTruckId String?
+  foodTruck   FoodTruck? @relation(fields: [foodTruckId], references: [id], onDelete: Cascade)
+  
+  @@map("images")
+}
+
+model Specification {
+  id          String @id @default(cuid())
+  dimensions  String?
+  capacity    String?
+  weight      String?
+  power       String?
+  
+  // Relations
+  foodTruckId String     @unique
+  foodTruck   FoodTruck  @relation(fields: [foodTruckId], references: [id], onDelete: Cascade)
+  
+  @@map("specifications")
+}
+
+model Equipment {
+  id          String @id @default(cuid())
+  name        String
+  description String?
+  
+  // Relations
+  foodTruckId String
+  foodTruck   FoodTruck @relation(fields: [foodTruckId], references: [id], onDelete: Cascade)
+  
+  @@map("equipment")
+}
+
+model Feature {
+  id          String @id @default(cuid())
+  name        String
+  description String?
+  
+  // Relations
+  foodTruckId String
+  foodTruck   FoodTruck @relation(fields: [foodTruckId], references: [id], onDelete: Cascade)
+  
+  @@map("features")
+}

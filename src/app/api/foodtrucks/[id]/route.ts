@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { serverFoodTruckStorage } from '@/lib/serverStorage';
+import { FoodTruckService } from '@/lib/services/foodTruckService';
+import { testDatabaseConnection } from '@/lib/database';
 
 // GET /api/foodtrucks/[id] - Get a specific food truck
 export async function GET(
@@ -9,7 +10,17 @@ export async function GET(
   try {
     const { id } = await params;
     console.log('Fetching food truck with ID:', id);
-    const truck = await serverFoodTruckStorage.getById(id);
+    
+    // Test database connection
+    const dbConnected = await testDatabaseConnection();
+    if (!dbConnected) {
+      return NextResponse.json(
+        { success: false, error: 'Database connection failed' },
+        { status: 500 }
+      );
+    }
+
+    const truck = await FoodTruckService.getFoodTruckById(id);
     console.log('Food truck found:', truck ? 'Yes' : 'No');
     
     if (!truck) {
@@ -36,6 +47,16 @@ export async function PUT(
 ) {
   try {
     const { id } = await params;
+    
+    // Test database connection
+    const dbConnected = await testDatabaseConnection();
+    if (!dbConnected) {
+      return NextResponse.json(
+        { success: false, error: 'Database connection failed' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     
     // Validate required fields
@@ -50,7 +71,7 @@ export async function PUT(
       }
     }
 
-    const updatedTruck = await serverFoodTruckStorage.update(id, {
+    const updatedTruck = await FoodTruckService.updateFoodTruck(id, {
       name: body.name,
       description: body.description,
       shortDescription: body.shortDescription || body.description,
@@ -62,6 +83,8 @@ export async function PUT(
         features: []
       },
       images: body.images || [],
+      equipment: body.equipment || [],
+      features: body.features || [],
       featured: body.featured || body.isFeatured || false,
     });
     return NextResponse.json({ success: true, data: updatedTruck });
@@ -81,7 +104,17 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
-    const truck = await serverFoodTruckStorage.getById(id);
+    
+    // Test database connection
+    const dbConnected = await testDatabaseConnection();
+    if (!dbConnected) {
+      return NextResponse.json(
+        { success: false, error: 'Database connection failed' },
+        { status: 500 }
+      );
+    }
+
+    const truck = await FoodTruckService.getFoodTruckById(id);
     
     if (!truck) {
       return NextResponse.json(
@@ -90,7 +123,7 @@ export async function DELETE(
       );
     }
 
-    await serverFoodTruckStorage.delete(id);
+    await FoodTruckService.deleteFoodTruck(id);
     return NextResponse.json({ success: true, message: 'Food truck deleted successfully' });
   } catch (error) {
     console.error('Error deleting food truck:', error);

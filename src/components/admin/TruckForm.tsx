@@ -214,13 +214,10 @@ export default function TruckForm({ isOpen, onClose, truck, onSave, isLoading = 
 
   const removeUploadedImage = async (imageUrl: string, index: number) => {
     try {
-      // Extract filename from URL
-      const fileName = imageUrl.split('/').pop();
-      if (fileName) {
-        await fetch(`/api/upload?fileName=${fileName}`, {
-          method: 'DELETE',
-        });
-      }
+      // For database-stored images, we need to find the image ID
+      // For now, we'll just remove from form data
+      // In a full implementation, you'd store image IDs with the URLs
+      console.log('Removing image:', imageUrl);
     } catch (error) {
       console.error('Error deleting file:', error);
     }
