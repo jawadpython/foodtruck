@@ -5,12 +5,11 @@ import { motion } from 'framer-motion';
 import { 
   X, 
   Save, 
-  Upload, 
   Plus, 
   Trash2,
   AlertCircle,
   CheckCircle,
-  Image as ImageIcon
+  Check
 } from 'lucide-react';
 import { FoodTruck } from '@/types';
 
@@ -38,9 +37,22 @@ export default function TruckForm({ isOpen, onClose, truck, onSave, isLoading = 
     }
   });
 
-  const [newImage, setNewImage] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isUploading, setIsUploading] = useState(false);
+
+  // Available static images for each category
+  const getAvailableImages = (category: string) => {
+    const imageMap: Record<string, string[]> = {
+      'vintage': ['/images/foodtrucks/vintage.svg'],
+      'food-trucks': ['/images/foodtrucks/food-trucks.svg'],
+      'kiosque': ['/images/foodtrucks/kiosque.svg'],
+      'conteneur': ['/images/foodtrucks/conteneur.svg'],
+      'remorque': ['/images/foodtrucks/remorque.svg'],
+      'modulaire': ['/images/foodtrucks/modulaire.svg'],
+      'mobile-chef': ['/images/foodtrucks/mobile-chef.svg'],
+      'charrette': ['/images/foodtrucks/charrette.svg']
+    };
+    return imageMap[category] || [];
+  };
 
   const categories = [
     { value: 'vintage', label: 'Vintage Food-Trucks' },
@@ -119,42 +131,11 @@ export default function TruckForm({ isOpen, onClose, truck, onSave, isLoading = 
   };
 
 
-  const addImage = () => {
-    if (newImage.trim()) {
-      setFormData({
-        ...formData,
-        images: [...formData.images, newImage.trim()]
-      });
-      setNewImage('');
-    }
-  };
-
   const removeImage = (index: number) => {
     setFormData({
       ...formData,
       images: formData.images.filter((_, i) => i !== index)
     });
-  };
-
-  // Simulate image upload
-  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    setIsUploading(true);
-    
-    // Simulate upload delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Create a mock URL for the uploaded image
-    const mockUrl = URL.createObjectURL(file);
-    
-    setFormData({
-      ...formData,
-      images: [...formData.images, mockUrl]
-    });
-    
-    setIsUploading(false);
   };
 
   if (!isOpen) return null;
@@ -276,68 +257,77 @@ export default function TruckForm({ isOpen, onClose, truck, onSave, isLoading = 
               Images
             </label>
             
-            {/* Image Upload */}
+            {/* Image Selection */}
             <div className="mb-4">
-              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500">
-                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                  {isUploading ? (
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  ) : (
-                    <Upload className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" />
-                  )}
-                  <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                    <span className="font-semibold">Cliquez pour télécharger</span> ou glissez-déposez
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">PNG, JPG ou GIF (MAX. 10MB)</p>
+              <div className="space-y-2">
+                <label className="block text-xs font-medium text-gray-600 dark:text-gray-400">
+                  Images disponibles pour {categories.find(c => c.value === formData.category)?.label}:
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {getAvailableImages(formData.category).map((imagePath) => (
+                    <button
+                      key={imagePath}
+                      type="button"
+                      onClick={() => {
+                        if (!formData.images.includes(imagePath)) {
+                          setFormData({
+                            ...formData,
+                            images: [...formData.images, imagePath]
+                          });
+                        }
+                      }}
+                      disabled={formData.images.includes(imagePath)}
+                      className={`relative p-2 border rounded-lg transition-colors ${
+                        formData.images.includes(imagePath)
+                          ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                          : 'border-gray-300 dark:border-gray-600 hover:border-blue-500'
+                      }`}
+                    >
+                      <img
+                        src={imagePath}
+                        alt="Food truck"
+                        className="w-full h-16 object-cover rounded"
+                      />
+                      {formData.images.includes(imagePath) && (
+                        <div className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                          <Check className="w-3 h-3 text-white" />
+                        </div>
+                      )}
+                    </button>
+                  ))}
                 </div>
-                <input 
-                  type="file" 
-                  className="hidden" 
-                  accept="image/*"
-                  onChange={handleImageUpload}
-                  disabled={isUploading}
-                />
-              </label>
-            </div>
-
-            {/* Image URLs */}
-            <div className="space-y-2">
-              {formData.images.map((image, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <div className="flex-1 flex items-center space-x-2">
-                    <ImageIcon className="h-4 w-4 text-gray-500" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300 truncate">
-                      {image.startsWith('blob:') ? `Image ${index + 1}` : image}
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => removeImage(index)}
-                    className="p-2 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/20 rounded-lg transition-colors"
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </button>
-                </div>
-              ))}
-              
-              <div className="flex space-x-2">
-                <input
-                  type="url"
-                  value={newImage}
-                  onChange={(e) => setNewImage(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addImage())}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="https://example.com/image.jpg"
-                />
-                <button
-                  type="button"
-                  onClick={addImage}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  <Plus className="h-4 w-4" />
-                </button>
               </div>
             </div>
+
+            {/* Selected Images */}
+            {formData.images.length > 0 && (
+              <div className="space-y-2">
+                <label className="block text-xs font-medium text-gray-600 dark:text-gray-400">
+                  Images sélectionnées:
+                </label>
+                {formData.images.map((image, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <div className="flex-1 flex items-center space-x-2">
+                      <img
+                        src={image}
+                        alt={`Food truck ${index + 1}`}
+                        className="w-8 h-8 object-cover rounded"
+                      />
+                      <span className="text-sm text-gray-600 dark:text-gray-300 truncate">
+                        {image.split('/').pop()}
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeImage(index)}
+                      className="p-2 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/20 rounded-lg transition-colors"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Featured checkbox */}
