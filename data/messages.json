@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1759486787074qz6y4bxgp",
+    "name": "Test Contact",
+    "email": "contact@example.com",
+    "phone": "555123456",
+    "subject": "Test Subject",
+    "message": "Test contact message",
+    "status": "replied",
+    "createdAt": "2025-10-03T10:19:47.071Z"
+  },
+  {
+    "id": "1759487310085v69157q0c",
+    "name": "fddffd",
+    "email": "fdf111d@gmail.com",
+    "phone": "0688888888",
+    "subject": "Demande de devis",
+    "message": "guyuyhuyhuyhhukhkukhkhk",
+    "status": "replied",
+    "createdAt": "2025-10-03T10:28:30.083Z"
+  }
+]

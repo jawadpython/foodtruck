@@ -1,0 +1,87 @@
+[
+  {
+    "id": "17594910314135bk5sz89l",
+    "name": "Conteneurs",
+    "description": "Testez un marché, testez un lieu ou simplement déplacez-le au gré des événements. Le conteneur restaurant est la solution idéale en nomade ou en fixe.\n\nConstruit à partir d’un conteneur 20 pieds ou 40 pieds. Il peut accueillir des clients à l’intérieur ou depuis l’extérieur avec un comptoir aménagé et sa terrasse démontable.\n\n",
+    "shortDescription": "Testez un marché, testez un lieu ou simplement déplacez-le au gré des événements. Le conteneur restaurant est la solution idéale en nomade ou en fixe.  Construit à partir d’un conteneur 20 pieds ou 40 pieds. Il peut accueillir des clients à l’intérieur ou depuis l’extérieur avec un comptoir aménagé et sa terrasse démontable.",
+    "category": "conteneur",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "blob:http://localhost:3001/6b3bc6c1-c80e-42b2-a823-9d81f585df8f"
+    ],
+    "featured": false
+  },
+  {
+    "id": "17594910574305a3p76kh7",
+    "name": "Remorque",
+    "description": "La remorque magasin a une histoire longue et glorieuse perpétuée pendant longtemps par les marchands ambulants.\n\nL’utilisation de remorques magasin résulte prometteuse dans plusieurs domaines, comme par exemple les sandwicheries ambulantes, les camions snack et restaurant lors de foires et d’événements divers, et le commerce de vêtements au détail.",
+    "shortDescription": "La remorque magasin a une histoire longue et glorieuse perpétuée pendant longtemps par les marchands ambulants.  L’utilisation de remorques magasin résulte prometteuse dans plusieurs domaines, comme par exemple les sandwicheries ambulantes, les camions snack et restaurant lors de foires et d’événements divers, et le commerce de vêtements au détail.",
+    "category": "remorque",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "blob:http://localhost:3001/4408533d-0c7e-4167-9c1c-9f953dc46fec"
+    ],
+    "featured": false
+  },
+  {
+    "id": "1759491080141de3yyp98x",
+    "name": "Modulaire",
+    "description": "Nous proposons à la location des modules de cuisine, pour répondre à tous les besoins de la cuisine mobile temporaire. Ces modules s’installent pour quelques jours ou quelques mois en fonction de vos contraintes.\n\nNous intervenons dans différents secteurs tels que : hôpitaux, lycées et collèges, collectivités, maisons de retraire, événementiel.\n\nNos cuisines modulaires professionnelles s’articulent autour des différentes tâches.",
+    "shortDescription": "Nous proposons à la location des modules de cuisine, pour répondre à tous les besoins de la cuisine mobile temporaire. Ces modules s’installent pour quelques jours ou quelques mois en fonction de vos contraintes.  Nous intervenons dans différents secteurs tels que : hôpitaux, lycées et collèges, collectivités, maisons de retraire, événementiel.  Nos cuisines modulaires professionnelles s’articulent autour des différentes tâches.",
+    "category": "modulaire",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "blob:http://localhost:3001/626ca263-397a-4d86-bbec-be91b558d4ab"
+    ],
+    "featured": false
+  },
+  {
+    "id": "17594911068418brcqyjx8",
+    "name": "Mobile chef",
+    "description": "Mobile Chef est une cuisine professionnelle ambulante, modulable et personnalisable.\n\nCe concept permet d’aller à la rencontre du consommateur, de cuisiner au plus près, au moment idéal, en choisissant l’activité culinaire adaptée.\n\n",
+    "shortDescription": "Mobile Chef est une cuisine professionnelle ambulante, modulable et personnalisable.  Ce concept permet d’aller à la rencontre du consommateur, de cuisiner au plus près, au moment idéal, en choisissant l’activité culinaire adaptée.",
+    "category": "mobile-chef",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "blob:http://localhost:3001/8e92119d-a25f-4ff8-8450-9b9059f644aa"
+    ],
+    "featured": false
+  },
+  {
+    "id": "17594911309313e62s76o8",
+    "name": "Charrette",
+    "description": "Avec son aspect rétro qui évoque l’enfance. Cette charrette est la solution pensée pour toutes les activités qui veulent proposer quelque chose de nouveau et d’élégant.\n\nPolyvalente, maniable, facilement transportable, elle rendra uniques tous les événements auxquels vous participerez.",
+    "shortDescription": "Avec son aspect rétro qui évoque l’enfance. Cette charrette est la solution pensée pour toutes les activités qui veulent proposer quelque chose de nouveau et d’élégant.  Polyvalente, maniable, facilement transportable, elle rendra uniques tous les événements auxquels vous participerez.",
+    "category": "charrette",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "blob:http://localhost:3001/50159070-b5a0-43f5-8199-013d817a9215"
+    ],
+    "featured": false
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1759486773571rc4abdzhf",
+    "truckId": "test-truck-2",
+    "truckName": "Test Truck 2",
+    "customerName": "Test User 2",
+    "customerEmail": "test2@example.com",
+    "customerPhone": "987654321",
+    "message": "Test quote request 2",
+    "status": "pending",
+    "createdAt": "2025-10-03T10:19:33.570Z",
+    "updatedAt": "2025-10-03T10:19:33.570Z"
+  },
+  {
+    "id": "1759487281619fiofv2ngn",
+    "truckId": "",
+    "truckName": "Demande générale",
+    "customerName": "uyggu",
+    "customerEmail": "fdfd@gmail.com",
+    "customerPhone": "0655887744",
+    "message": "jhihjhb jbhbhj",
+    "status": "pending",
+    "createdAt": "2025-10-03T10:28:01.617Z",
+    "updatedAt": "2025-10-03T10:28:01.617Z"
+  },
+  {
+    "id": "1759489566747kqyrqaj17",
+    "truckId": "",
+    "truckName": "Demande générale",
+    "customerName": "fddffd",
+    "customerEmail": "fdf111d@gmail.com",
+    "customerPhone": "0688888888",
+    "message": "fbcbffbfdfbbfb",
+    "status": "pending",
+    "createdAt": "2025-10-03T11:06:06.743Z",
+    "updatedAt": "2025-10-03T11:06:06.743Z"
+  },
+  {
+    "id": "1759490972984a6cpp2k1z",
+    "truckId": "",
+    "truckName": "Demande générale",
+    "customerName": "ttyty",
+    "customerEmail": "fdfd@gmail.com",
+    "customerPhone": "0655887744",
+    "message": "ytjtjtyjyjtyjtyjty",
+    "status": "pending",
+    "createdAt": "2025-10-03T11:29:32.981Z",
+    "updatedAt": "2025-10-03T11:29:32.981Z"
+  }
+]
