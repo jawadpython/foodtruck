@@ -34,7 +34,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Create upload directory if it doesn't exist
-    const uploadDir = join(process.cwd(), 'public', 'uploads', 'foodtrucks');
+    // Use external directory for production, fallback to public for development
+    const isProduction = process.env.NODE_ENV === 'production';
+    const uploadDir = isProduction 
+      ? '/var/www/food-truck-marketplace/public/uploads/foodtrucks'
+      : join(process.cwd(), 'public', 'uploads', 'foodtrucks');
+    
     if (!existsSync(uploadDir)) {
       await mkdir(uploadDir, { recursive: true });
     }
@@ -111,7 +116,12 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const filePath = join(process.cwd(), 'public', 'uploads', 'foodtrucks', fileName);
+    // Use the same directory logic for deletion
+    const isProduction = process.env.NODE_ENV === 'production';
+    const uploadDir = isProduction 
+      ? '/var/www/food-truck-marketplace/public/uploads/foodtrucks'
+      : join(process.cwd(), 'public', 'uploads', 'foodtrucks');
+    const filePath = join(uploadDir, fileName);
     
     if (existsSync(filePath)) {
       const { unlink } = await import('fs/promises');
