@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
     const requiredFields = ['name', 'description', 'category'];
     for (const field of requiredFields) {
       if (!body[field]) {
+        console.log(`Missing required field: ${field}`);
         return NextResponse.json(
           { success: false, error: `Missing required field: ${field}` },
           { status: 400 }

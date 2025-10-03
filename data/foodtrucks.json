@@ -1,9 +1,60 @@
 [
   {
-    "id": "17594910314135bk5sz89l",
-    "name": "Conteneurs",
-    "description": "Testez un marché, testez un lieu ou simplement déplacez-le au gré des événements. Le conteneur restaurant est la solution idéale en nomade ou en fixe.\n\nConstruit à partir d'un conteneur 20 pieds ou 40 pieds. Il peut accueillir des clients à l'intérieur ou depuis l'extérieur avec un comptoir aménagé et sa terrasse démontable.\n\n",
-    "shortDescription": "Testez un marché, testez un lieu ou simplement déplacez-le au gré des événements. Le conteneur restaurant est la solution idéale en nomade ou en fixe.  Construit à partir d'un conteneur 20 pieds ou 40 pieds. Il peut accueillir des clients à l'intérieur ou depuis l'extérieur avec un comptoir aménagé et sa terrasse démontable.",
+    "id": "1759499611864vm2kgt5ck",
+    "name": "Vintage Food-Truck: CYCLE DE PROJET",
+    "description": "Resto’Mov est votre guichet unique pour une entreprise de restauration mobile. Nous trouvons et sélectionnons à la main des véhicules d’époque uniques qui répondront à vos exigences.\n\nNotre vaste processus de restauration transformera une pièce de rouille en un diamant poli, qui, enfin, sera équipé de la meilleure installation de cuisine.\n\nLisez ci-dessous pour plus de détails sur notre cycle de projet.",
+    "shortDescription": "Resto’Mov est votre guichet unique pour une entreprise de restauration mobile. Nous trouvons et sélectionnons à la main des véhicules d’époque uniques qui répondront à vos exigences.  Notre vaste processus de restauration transformera une pièce de rouille en un diamant poli, qui, enfin, sera équipé de la meilleure installation de cuisine.  Lisez ci-dessous pour plus de détails sur notre cycle de projet.",
+    "category": "vintage",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "/uploads/foodtrucks/1759499610118_cp5z6lxxdln.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "1759499657645dmprxfyez",
+    "name": "Food-Truck: Une Tendance",
+    "description": "Le food truck devient de plus en plus tendance. Il acquiert une notoriété digne des grands restaurants français où la gastronomie et la gourmandise ont toujours fait bon ménage.\n\nResto’Mov vous propose de découvrir une palette impressionnante de possibilités pour votre camion magasin. Food truck, camion pizza, boulanger, glacier, friterie et autres camion boucherie charcuterie. Tous les métiers sont représentés chez Resto’Mov.\n\nChoisissez le type de camion magasin qui correspond le plus à vos besoins et demandez-nous le devis correspondant à votre choix.",
+    "shortDescription": "Le food truck devient de plus en plus tendance. Il acquiert une notoriété digne des grands restaurants français où la gastronomie et la gourmandise ont toujours fait bon ménage.  Resto’Mov vous propose de découvrir une palette impressionnante de possibilités pour votre camion magasin. Food truck, camion pizza, boulanger, glacier, friterie et autres camion boucherie charcuterie. Tous les métiers sont représentés chez Resto’Mov.  Choisissez le type de camion magasin qui correspond le plus à vos besoins et demandez-nous le devis correspondant à votre choix.",
+    "category": "food-trucks",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "/uploads/foodtrucks/1759499656528_ni9ch71krrh.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "1759499688444sq6acfhb4",
+    "name": "Kiosques magasin sur-mesure",
+    "description": "A l’écoute de vos besoins, nous sommes force de proposition et nous vous apportons des solutions, afin de construire ensemble votre kiosque. Nous mettons en œuvre notre savoir-faire et notre expertise au service de votre réussite.\n\nTous nos produits sont contrôlés minutieusement à chaque étape de leur fabrication, nous nous engageons à respecter les délais impartis.\n\nEn étroite collaboration avec notre bureau d’étude, nous réalisons votre aménagement sur-mesure conformément au cahier des charges fixé.\n\nL’innovation est au cœur de notre vision, tournée vers l’avenir et adaptée à l’évolution des tendances.",
+    "shortDescription": "A l’écoute de vos besoins, nous sommes force de proposition et nous vous apportons des solutions, afin de construire ensemble votre kiosque. Nous mettons en œuvre notre savoir-faire et notre expertise au service de votre réussite.  Tous nos produits sont contrôlés minutieusement à chaque étape de leur fabrication, nous nous engageons à respecter les délais impartis.  En étroite collaboration avec notre bureau d’étude, nous réalisons votre aménagement sur-mesure conformément au cahier des charges fixé.  L’innovation est au cœur de notre vision, tournée vers l’avenir et adaptée à l’évolution des tendances.",
+    "category": "kiosque",
+    "specifications": {
+      "dimensions": "",
+      "capacity": "",
+      "equipment": [],
+      "features": []
+    },
+    "images": [
+      "/uploads/foodtrucks/1759499683161_8djpr6hd5il.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "1759499737700laniz811j",
+    "name": "CONTAINER RESTAURANT",
+    "description": "Testez un marché, testez un lieu ou simplement déplacez-le au gré des événements. Le conteneur restaurant est la solution idéale en nomade ou en fixe.\n\nConstruit à partir d’un conteneur 20 pieds ou 40 pieds. Il peut accueillir des clients à l’intérieur ou depuis l’extérieur avec un comptoir aménagé et sa terrasse démontable.",
+    "shortDescription": "Testez un marché, testez un lieu ou simplement déplacez-le au gré des événements. Le conteneur restaurant est la solution idéale en nomade ou en fixe.  Construit à partir d’un conteneur 20 pieds ou 40 pieds. Il peut accueillir des clients à l’intérieur ou depuis l’extérieur avec un comptoir aménagé et sa terrasse démontable.",
     "category": "conteneur",
     "specifications": {
       "dimensions": "",
@@ -12,15 +63,15 @@
       "features": []
     },
     "images": [
-      "/images/foodtrucks/conteneur.svg"
+      "/uploads/foodtrucks/1759499736290_623y7nrgssa.jpg"
     ],
-    "featured": true
+    "featured": false
   },
   {
-    "id": "17594910574305a3p76kh7",
-    "name": "Remorque",
-    "description": "La remorque magasin a une histoire longue et glorieuse perpétuée pendant longtemps par les marchands ambulants.\n\nL'utilisation de remorques magasin résulte prometteuse dans plusieurs domaines, comme par exemple les sandwicheries ambulantes, les camions snack et restaurant lors de foires et d'événements divers, et le commerce de vêtements au détail.",
-    "shortDescription": "La remorque magasin a une histoire longue et glorieuse perpétuée pendant longtemps par les marchands ambulants.  L'utilisation de remorques magasin résulte prometteuse dans plusieurs domaines, comme par exemple les sandwicheries ambulantes, les camions snack et restaurant lors de foires et d'événements divers, et le commerce de vêtements au détail.",
+    "id": "1759499762721fopgnhtt0",
+    "name": "REMORQUE CUISINE",
+    "description": "La remorque magasin a une histoire longue et glorieuse perpétuée pendant longtemps par les marchands ambulants.\n\nL’utilisation de remorques magasin résulte prometteuse dans plusieurs domaines, comme par exemple les sandwicheries ambulantes, les camions snack et restaurant lors de foires et d’événements divers, et le commerce de vêtements au détail.",
+    "shortDescription": "La remorque magasin a une histoire longue et glorieuse perpétuée pendant longtemps par les marchands ambulants.  L’utilisation de remorques magasin résulte prometteuse dans plusieurs domaines, comme par exemple les sandwicheries ambulantes, les camions snack et restaurant lors de foires et d’événements divers, et le commerce de vêtements au détail.",
     "category": "remorque",
     "specifications": {
       "dimensions": "",
@@ -29,15 +80,15 @@
       "features": []
     },
     "images": [
-      "/images/foodtrucks/remorque.svg"
+      "/uploads/foodtrucks/1759499761744_wy2m18mnib.jpg"
     ],
-    "featured": true
+    "featured": false
   },
   {
-    "id": "1759491080141de3yyp98x",
-    "name": "Modulaire",
-    "description": "Nous proposons à la location des modules de cuisine, pour répondre à tous les besoins de la cuisine mobile temporaire. Ces modules s'installent pour quelques jours ou quelques mois en fonction de vos contraintes.\n\nNous intervenons dans différents secteurs tels que : hôpitaux, lycées et collèges, collectivités, maisons de retraire, événementiel.\n\nNos cuisines modulaires professionnelles s'articulent autour des différentes tâches.",
-    "shortDescription": "Nous proposons à la location des modules de cuisine, pour répondre à tous les besoins de la cuisine mobile temporaire. Ces modules s'installent pour quelques jours ou quelques mois en fonction de vos contraintes.  Nous intervenons dans différents secteurs tels que : hôpitaux, lycées et collèges, collectivités, maisons de retraire, événementiel.  Nos cuisines modulaires professionnelles s'articulent autour des différentes tâches.",
+    "id": "1759499789330pacbh6jjb",
+    "name": "Module de cuisine temporaire en location",
+    "description": "Nous proposons à la location des modules de cuisine, pour répondre à tous les besoins de la cuisine mobile temporaire. Ces modules s’installent pour quelques jours ou quelques mois en fonction de vos contraintes.\n\nNous intervenons dans différents secteurs tels que : hôpitaux, lycées et collèges, collectivités, maisons de retraire, événementiel.\n\nNos cuisines modulaires professionnelles s’articulent autour des différentes tâches.",
+    "shortDescription": "Nous proposons à la location des modules de cuisine, pour répondre à tous les besoins de la cuisine mobile temporaire. Ces modules s’installent pour quelques jours ou quelques mois en fonction de vos contraintes.  Nous intervenons dans différents secteurs tels que : hôpitaux, lycées et collèges, collectivités, maisons de retraire, événementiel.  Nos cuisines modulaires professionnelles s’articulent autour des différentes tâches.",
     "category": "modulaire",
     "specifications": {
       "dimensions": "",
@@ -46,16 +97,16 @@
       "features": []
     },
     "images": [
-      "/images/foodtrucks/modulaire.svg"
+      "/uploads/foodtrucks/1759499783908_ns2niex1fjp.jpg"
     ],
     "featured": false
   },
   {
-    "id": "17594911068418brcqyjx8",
+    "id": "1759499810705agsfengaf",
     "name": "Mobile chef",
-    "description": "Mobile Chef est une cuisine professionnelle ambulante, modulable et personnalisable.\n\nCe concept permet d'aller à la rencontre du consommateur, de cuisiner au plus près, au moment idéal, en choisissant l'activité culinaire adaptée.\n\n",
-    "shortDescription": "Mobile Chef est une cuisine professionnelle ambulante, modulable et personnalisable.  Ce concept permet d'aller à la rencontre du consommateur, de cuisiner au plus près, au moment idéal, en choisissant l'activité culinaire adaptée.",
-    "category": "mobile-chef",
+    "description": "Mobile Chef est une cuisine professionnelle ambulante, modulable et personnalisable.\n\nCe concept permet d’aller à la rencontre du consommateur, de cuisiner au plus près, au moment idéal, en choisissant l’activité culinaire adaptée.\n\n",
+    "shortDescription": "Mobile Chef est une cuisine professionnelle ambulante, modulable et personnalisable.  Ce concept permet d’aller à la rencontre du consommateur, de cuisiner au plus près, au moment idéal, en choisissant l’activité culinaire adaptée.",
+    "category": "vintage",
     "specifications": {
       "dimensions": "",
       "capacity": "",
@@ -63,16 +114,16 @@
       "features": []
     },
     "images": [
-      "/images/foodtrucks/mobile-chef.svg"
+      "/uploads/foodtrucks/1759499805791_bjfx7pffhaw.jpg"
     ],
-    "featured": true
+    "featured": false
   },
   {
-    "id": "17594911309313e62s76o8",
+    "id": "17594998328322r8jn5zrt",
     "name": "Charrette",
-    "description": "Avec son aspect rétro qui évoque l'enfance. Cette charrette est la solution pensée pour toutes les activités qui veulent proposer quelque chose de nouveau et d'élégant.\n\nPolyvalente, maniable, facilement transportable, elle rendra uniques tous les événements auxquels vous participerez.",
-    "shortDescription": "Avec son aspect rétro qui évoque l'enfance. Cette charrette est la solution pensée pour toutes les activités qui veulent proposer quelque chose de nouveau et d'élégant.  Polyvalente, maniable, facilement transportable, elle rendra uniques tous les événements auxquels vous participerez.",
-    "category": "charrette",
+    "description": "Avec son aspect rétro qui évoque l’enfance. Cette charrette est la solution pensée pour toutes les activités qui veulent proposer quelque chose de nouveau et d’élégant.\n\nPolyvalente, maniable, facilement transportable, elle rendra uniques tous les événements auxquels vous participerez.",
+    "shortDescription": "Avec son aspect rétro qui évoque l’enfance. Cette charrette est la solution pensée pour toutes les activités qui veulent proposer quelque chose de nouveau et d’élégant.  Polyvalente, maniable, facilement transportable, elle rendra uniques tous les événements auxquels vous participerez.",
+    "category": "vintage",
     "specifications": {
       "dimensions": "",
       "capacity": "",
@@ -80,7 +131,7 @@
       "features": []
     },
     "images": [
-      "/images/foodtrucks/charrette.svg"
+      "/uploads/foodtrucks/1759499831773_zffebi5d2sc.jpg"
     ],
     "featured": false
   }

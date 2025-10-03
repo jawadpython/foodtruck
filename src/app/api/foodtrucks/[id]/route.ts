@@ -4,11 +4,12 @@ import { serverFoodTruckStorage } from '@/lib/serverStorage';
 // GET /api/foodtrucks/[id] - Get a specific food truck
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    console.log('Fetching food truck with ID:', params.id);
-    const truck = await serverFoodTruckStorage.getById(params.id);
+    const { id } = await params;
+    console.log('Fetching food truck with ID:', id);
+    const truck = await serverFoodTruckStorage.getById(id);
     console.log('Food truck found:', truck ? 'Yes' : 'No');
     
     if (!truck) {
@@ -31,15 +32,17 @@ export async function GET(
 // PUT /api/foodtrucks/[id] - Update a specific food truck
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const body = await request.json();
     
     // Validate required fields
     const requiredFields = ['name', 'description', 'category'];
     for (const field of requiredFields) {
       if (!body[field]) {
+        console.log(`Missing required field: ${field}`);
         return NextResponse.json(
           { success: false, error: `Missing required field: ${field}` },
           { status: 400 }
@@ -47,7 +50,7 @@ export async function PUT(
       }
     }
 
-    const updatedTruck = await serverFoodTruckStorage.update(params.id, {
+    const updatedTruck = await serverFoodTruckStorage.update(id, {
       name: body.name,
       description: body.description,
       shortDescription: body.shortDescription || body.description,
@@ -74,10 +77,11 @@ export async function PUT(
 // DELETE /api/foodtrucks/[id] - Delete a specific food truck
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const truck = await serverFoodTruckStorage.getById(params.id);
+    const { id } = await params;
+    const truck = await serverFoodTruckStorage.getById(id);
     
     if (!truck) {
       return NextResponse.json(
@@ -86,7 +90,7 @@ export async function DELETE(
       );
     }
 
-    await serverFoodTruckStorage.delete(params.id);
+    await serverFoodTruckStorage.delete(id);
     return NextResponse.json({ success: true, message: 'Food truck deleted successfully' });
   } catch (error) {
     console.error('Error deleting food truck:', error);
